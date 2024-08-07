@@ -41,6 +41,6 @@ test.each([
 )
 
 
-test('ICE', () => {
+test('ICED', () => {
   expect.soft(calculateScrabbleScore("ICED")).toBe(7)
   })

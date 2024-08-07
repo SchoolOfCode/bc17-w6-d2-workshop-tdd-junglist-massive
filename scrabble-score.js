@@ -16,9 +16,8 @@ export function calculateScrabbleScore(word) {
   let score=0;
 
   for(let j = 0; j < word.length; j++){
-    let letter=word.substring(j,1)
+    let letter=word.substring(j,j+1)
     for (let i = 0; i < bigLetterArray.length; i++){
-
       if (bigLetterArray[i].includes(letter)){
         score=score+i+1;
       }
