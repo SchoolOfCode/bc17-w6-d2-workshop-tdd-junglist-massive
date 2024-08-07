@@ -47,5 +47,5 @@ test('ICED', () => {
 
 
 test('ICeD', () => {
-  expect.soft(calculateScrabbleScore("ICeD")).toThrowError("Invalid text")
+  expect.soft(() => calculateScrabbleScore("ICeD")).toThrowError("Invalid text")
   })
