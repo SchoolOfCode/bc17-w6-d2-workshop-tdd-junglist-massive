@@ -39,3 +39,8 @@ test.each([
     expect(calculateScrabbleScore(a)).toBe(expected)
   }
 )
+
+
+test('ICE', () => {
+  expect.soft(calculateScrabbleScore("ICED")).toBe(7)
+  })

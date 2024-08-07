@@ -12,10 +12,18 @@ export function calculateScrabbleScore(word) {
     [],
     ["Q", "Z"]
   ]
-  for (let i = 0; i < bigLetterArray.length; i++){
-    if (bigLetterArray[i].includes(word)){
-      return(i+1);
+
+  let score=0;
+
+  for(let j = 0; j < word.length; j++){
+    let letter=word.substring(j,1)
+    for (let i = 0; i < bigLetterArray.length; i++){
+
+      if (bigLetterArray[i].includes(letter)){
+        score=score+i+1;
+      }
     }
+
   }
-  return(0);
+  return score;
 }
