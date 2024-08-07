@@ -17,9 +17,15 @@ export function calculateScrabbleScore(word) {
 
   for(let j = 0; j < word.length; j++){
     let letter=word.substring(j,j+1)
+    let fails = 0
     for (let i = 0; i < bigLetterArray.length; i++){
       if (bigLetterArray[i].includes(letter)){
         score=score+i+1;
+      } else {
+        fails++;
+      }
+      if (fails == 10){
+        throw Error("Invalid text");
       }
     }
 

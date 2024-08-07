@@ -44,3 +44,8 @@ test.each([
 test('ICED', () => {
   expect.soft(calculateScrabbleScore("ICED")).toBe(7)
   })
+
+
+test('ICeD', () => {
+  expect.soft(calculateScrabbleScore("ICeD")).toThrowError("Invalid text")
+  })
